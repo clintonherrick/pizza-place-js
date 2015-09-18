@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bear Bones Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Bear Bones</h1>
+
+      <h3>Order your Bear Bones Pizza</h3>
+      <form id="new-order">
+        <div class="form-group">
+          <label for="size">Size</label>
+          <br/>
+          <select id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="number-of-pizzas">How many pizzas would you like</label>
+          <br/>
+          <input id="number-of-pizzas" name="number-of-pizzas" type="number" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+          <button id="add-toppings" class="btn btn-danger">Add a topping</button>
+        </div>
+
+        <div id="topping-options">
+        </div>
+
+        <button type="submit" class="btn btn-danger">Click for Total</button>
+      </form>
+
+      <div id="results">
+        <p>This here pizza is gonna run you:<span id="pizza-price"></span></p>
+      </div>
+    </div>
+  </body>
+</html>

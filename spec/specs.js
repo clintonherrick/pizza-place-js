@@ -7,12 +7,12 @@ describe('Pizza', function() {
 
   it("adds the pizzaSize method to all of the pizzas", function() {
     var testPizza = new Pizza("large", "pepperoni");
-    expect(testPizza.pizzaSize()).to.equal(15);
+    expect(testPizza.pizzaSize()).to.equal(16);
   });
 
   it("adds the pizzaTopping method to all of the pizzas", function() {
     var testPizza = new Pizza("large", "pepperoni");
-    expect(testPizza.pizzaTopping()).to.equal(15);
+    expect(testPizza.pizzaTopping()).to.equal(16);
   });
 
 
