@@ -1,16 +1,27 @@
-function Pizza(pizzaSize, pizzaTopping) {
+function orderPizza(pizzaSize, pizzaTopping, numberOfPizzas) {
   this.pizzaSize = pizzaSize;
   this.pizzaTopping = pizzaTopping;
+  this.numberOfPizzas = numberOfPizzas;
 }
 
-Pizza.prototype.basePizzaPrice = function() {
-  var basePizzaPrice = 0;
+orderPizza.prototype.basePizzaPrice = function() {
+  var PizzaPrice = 0;
 
   if(this.pizzaSize === "large") {
-    return basePizzaPrice + 15;
+    PizzaPrice = 15 * this.numberOfPizzas;
   } else if (this.basePizzaPrice === "medium") {
-    return basePizzaPrice + 13;
+    PizzaPrice = 13 * this.numberOfPizzas;
   } else {
-    return basePizzaPrice + 10;
+    PizzaPrice = 10 * this.numberOfPizzas;
   }
+
+  if (this.pizzaTopping !== undefined) {
+    this.pizzaTopping.forEach(function(topping) {
+      pizzaPrice += 1;
+    });
+  }
+
+  return pizzaPrice;
+
+
 });
